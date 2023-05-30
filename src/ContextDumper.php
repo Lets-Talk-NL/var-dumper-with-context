@@ -15,7 +15,7 @@ trait ContextDumper
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
 
         foreach ($backtrace as $trace) {
-            if (!empty($trace['file']) && !empty($trace['line']) && strpos($trace['file'], '/vendor/') === false ) {
+            if (!empty($trace['file']) && !empty($trace['line']) && strpos($trace['file'], '/vendor/morrislaptop') === false && strpos($trace['file'], '/vendor/symfony') === false ) {
                 return $trace;
             }
         }
